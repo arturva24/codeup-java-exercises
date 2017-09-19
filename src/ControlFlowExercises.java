@@ -10,13 +10,13 @@ public class ControlFlowExercises {
 
         }
 
-        int counter = 0;
-
+        int backWards = 100;
 
         do {
-            System.out.println(counter);
-            counter +=2;
-             } while(counter <=100);
+            System.out.println(backWards);
+            backWards -=5;
+
+        } while (backWards >=-10);
 
 
         }
