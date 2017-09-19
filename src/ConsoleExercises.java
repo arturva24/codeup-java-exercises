@@ -9,15 +9,15 @@ public class ConsoleExercises {
         System.out.println("Your favorite color is " + color);
 
         System.out.println("What's your favorite shape?");
-        String shape = scan.next();
+        String shape = scan.nextLine();
         System.out.println("Your favorite shape is " + shape);
 
         System.out.println("Whats your favorite animal?");
-        String animal = scan.next();
+        String animal = scan.nextLine();
         System.out.println("Your favorite animal is " + animal);
 
         System.out.println("Enter a sentence");
-        String sentence = scan.next();
+        String sentence = scan.nextLine();
         System.out.println("Your sentence is " + sentence);
 
         System.out.println("How old are you?");
