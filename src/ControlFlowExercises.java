@@ -1,22 +1,13 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-//        System.out.print("test!");
 
-        int i = 5;
-        while(i <= 15) {
-            System.out.println(i);
-            i++;
-
-        }
-
-        int backWards = 100;
+        long x = 2;
 
         do {
-            System.out.println(backWards);
-            backWards -=5;
-
-        } while (backWards >=-10);
+            System.out.println(x);
+            x *= x;
+            }while(x <= 1000000);
 
 
         }
