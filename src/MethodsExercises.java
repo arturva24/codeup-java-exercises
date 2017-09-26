@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        rollDice(getInteger(1,10));
+//        rollDice(getInteger(1,10));
         System.out.println(add(5,5));
         System.out.println(subtract(5,5));
         System.out.println(multiply(5,5));
