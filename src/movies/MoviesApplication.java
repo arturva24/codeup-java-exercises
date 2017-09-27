@@ -10,43 +10,41 @@ public class MoviesApplication {
 
         do {
 
-            System.out.println("What would you like to do?\n" +
+            System.out.println("What would you like to view?\n" +
                     "\n" +
-                    "0 - exit\n" +
-                    "1 - view all movies\n" +
-                    "2 - view movies in the animated category\n" +
-                    "3 - view movies in the drama category\n" +
-                    "4 - view movies in the horror category\n" +
-                    "5 - view movies in the scifi category\n");
+                    "0 - Exit\n" +
+                    "1 - View all movies\n" +
+                    "2 - View movies in the Animated category\n" +
+                    "3 - View movies in the Drama category\n" +
+                    "4 - View movies in the Horror category\n" +
+                    "5 - View movies in the Scifi category\n");
+
+            System.out.println("Enter your choice:");
 
 
-            int listOptions = input.getInt("Enter your input: ", 0, 5);
+            int movieOptions = input.getInt("Enter your choice: ", 0, 5);
 
-
-            if (listOptions == 0) {
+            if (movieOptions == 0) {
                 System.out.println("See you later!");
                 break;
-            } else if (listOptions == 1) {
-                Movie[] allMovies = MoviesArray.findAll();
 
+            } else if (movieOptions == 1) {
+                Movie[] allMovies = MoviesArray.findAll();
 
                 for (Movie movie : allMovies) {
                     System.out.println(movie.getName());
 
-
                 }
-            } else if (listOptions == 2) {
+            } else if (movieOptions == 2) {
                 Movie[] allMovies = MoviesArray.findAll();
-
 
                 for (Movie movie : allMovies) {
                     if (movie.getCategory().equals("animated")) {
                         System.out.println(movie.getName());
 
                     }
-
                 }
-            } else if (listOptions == 3) {
+            } else if (movieOptions == 3) {
                 Movie[] allMovies = MoviesArray.findAll();
 
 
@@ -55,40 +53,30 @@ public class MoviesApplication {
                         System.out.println(movie.getName());
 
                     }
-
                 }
-            } else if (listOptions == 4) {
+            } else if (movieOptions == 4) {
                 Movie[] allMovies = MoviesArray.findAll();
-
 
                 for (Movie movie : allMovies) {
                     if (movie.getCategory().equals("horror")) {
                         System.out.println(movie.getName());
 
-
                     }
-
-
                 }
-            } else if (listOptions == 5) {
+            } else if (movieOptions == 5) {
                 Movie[] allMovies = MoviesArray.findAll();
-
 
                 for (Movie movie : allMovies) {
                     if (movie.getCategory().equals("scifi")) {
                         System.out.println(movie.getName());
 
-
                     }
-
-
                 }
             }
             System.out.println();
-            System.out.println("would you like to continue? y/n");
+            System.out.println("Would you like to continue? y/n");
         } while (input.yesNo());
         System.out.println("Goodbye.");
-
     }
 }
 
