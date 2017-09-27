@@ -9,57 +9,57 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-//    public static void main(String[] args) {
-//        Scanner input = new Scanner(System.in);
-//        String msg = input.nextLine();
+    public String prompt;
 
-//    }
     public String getString(){
         String userString = scanner.nextLine();
         return userString;
     }
 
     public boolean yesNo(){
-        System.out.println("y/n ?");
         String userInput = this.scanner.nextLine();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
 
     }
 
-    public int getInt(int min, int max){
-        int userInput = getInt();
+    public int getInt(String prompt, int min, int max){
+        int userInput = getInt(prompt);
         if (userInput < min || userInput > max){
             System.out.println(userInput + " is not between  " + min + " and " + max);
-            return getInt(min, max);
+            return getInt(prompt, min, max);
         }
+        scanner.nextLine();
         return userInput;
 
     }
 
-    public int getInt(){
+    public int getInt(String prompt){
         if (this.scanner.hasNextInt()) {
             return this.scanner.nextInt();
         } else {
             System.out.println("Invalid Input!");
-            return getInt();
+            scanner.next();
+            return getInt(prompt);
         }
     }
 
-    public double getDouble(double min, double max) {
-        double userInput = getDouble();
+    public double getDouble(String prompt, double min, double max) {
+        double userInput = getDouble(prompt);
 
         if (userInput < min || userInput > max) {
             System.out.println(userInput + " is not between " + min + " and " + max);
         }
+        scanner.nextLine();
         return userInput;
     }
 
-    public double getDouble(){
+    public double getDouble(String prompt){
         if (this.scanner.hasNextDouble()){
             return this.scanner.nextDouble();
         } else {
             System.out.println("That's not an integer! Try again.");
-            return getInt();
+            scanner.nextLine();
+            return getInt(prompt);
         }
     }
 
