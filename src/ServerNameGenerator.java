@@ -8,7 +8,7 @@ public class ServerNameGenerator {
     }
 
     public static final String[] adjective=
-            {"bitter", "bland", "delicious", "fruity", "minty", "spicy", "sweet", "tangy", "tasty", "yummy"};
+            {"Bitter", "Bland", "Delicious", "Fruity", "Minty", "Spicy", "Sweet", "Tangy", "Tasty", "Yummy"};
 
 
     public static final String[] noun =
