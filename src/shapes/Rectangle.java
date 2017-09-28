@@ -11,10 +11,6 @@ public class Rectangle {
 
     }
 
-    public Rectangle() {
-    }
-
-
     public int getArea(){
         int area= length * width;
         return area;
