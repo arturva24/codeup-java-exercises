@@ -1,7 +1,6 @@
 package grades;
 
 import java.util.HashMap;
-import java.util.Random;
 
 import util.Input;
 
@@ -9,22 +8,16 @@ import util.Input;
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap <String, Student> map = new HashMap<>();
-        Student randy =new Student("Randy");
+        Student randy = new Student("Randy");
         randy.addGrade(100); randy.addGrade(50); randy.addGrade(0); randy.addGrade(70);
-//        randomGrade(randy,5);
-        Student ryan =new Student("Ryan");
+        Student ryan = new Student("Ryan");
         ryan.addGrade(90); ryan.addGrade(90); ryan.addGrade(80); ryan.addGrade(89);
-//        randomGrade(ryan,5);
         Student erik= new Student("Erik");
         erik.addGrade(100); erik.addGrade(90); erik.addGrade(95); erik.addGrade(91);
-//        randomGrade(erik,5);
         Student ramiro= new Student("Ramiro");
         ramiro.addGrade(100); ramiro.addGrade(100); ramiro.addGrade(80); ramiro.addGrade(86);
-//        randomGrade(ramiro,5);
         Student andy= new Student("Andy");
         andy.addGrade(100); andy.addGrade(97); andy.addGrade(96); andy.addGrade(97);
-//        randomGrade(andy,5);
-
 
         map.put("gotskilz", randy);
         map.put("rchavez",ryan);
@@ -34,16 +27,6 @@ public class GradesApplication {
         menu(map);
 
     }
-
-//  ***Random grade Generator***
-//  public static void randomGrade (Student student, int grades){
-//        Random randNum = new Random();
-//        int studentGrade;
-//        for (int i = 0; i < grades; i++) {
-//            studentGrade = randNum.nextInt(100);
-//            student.addGrade (studentGrade);
-//        }
-//    }
 
         public static void menu(HashMap<String, Student> map){
             Input input = new Input();
@@ -61,16 +44,19 @@ public class GradesApplication {
                 System.out.println("What student would you like to see more information on?\n");
                 System.out.print("> ");
                 userInput = input.getString();
+
                 if (map.containsKey(userInput)) {
-                    System.out.println(map.get(userInput).getName());
-                    System.out.println(map.get(userInput).getGradeAverage());
+                    System.out.println("Student: " + map.get(userInput).getName());
+                    System.out.println("Username: " + (userInput));
+                    System.out.println("Average " + map.get(userInput).getGradeAverage());
                     System.out.println("----------------");
 
                 } else if(userInput.equalsIgnoreCase("All")){
                     for(String keys : map.keySet()){
-                        System.out.println(map.get(keys).getName());
+                        System.out.println("Student: " + map.get(keys).getName());
+                        System.out.println("Username: " + keys);
                         map.get(keys).gradeList();
-                        System.out.println(map.get(keys).getGradeAverage());
+                        System.out.println("Average " + map.get(keys).getGradeAverage());
                         System.out.println("----------------");
                     }
 
