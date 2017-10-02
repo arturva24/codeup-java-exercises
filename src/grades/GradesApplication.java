@@ -11,19 +11,19 @@ public class GradesApplication {
         HashMap <String, Student> map = new HashMap<>();
         Student randy =new Student("Randy");
         randy.addGrade(100); randy.addGrade(50); randy.addGrade(0); randy.addGrade(70);
-//        randomGrade(zack,5);
+//        randomGrade(randy,5);
         Student ryan =new Student("Ryan");
         ryan.addGrade(90); ryan.addGrade(90); ryan.addGrade(80); ryan.addGrade(89);
 //        randomGrade(ryan,5);
         Student erik= new Student("Erik");
         erik.addGrade(100); erik.addGrade(90); erik.addGrade(95); erik.addGrade(91);
-//        randomGrade(jason,5);
+//        randomGrade(erik,5);
         Student ramiro= new Student("Ramiro");
         ramiro.addGrade(100); ramiro.addGrade(100); ramiro.addGrade(80); ramiro.addGrade(86);
-//        randomGrade(fernando,5);
+//        randomGrade(ramiro,5);
         Student andy= new Student("Andy");
         andy.addGrade(100); andy.addGrade(97); andy.addGrade(96); andy.addGrade(97);
-//        randomGrade(luis,5);
+//        randomGrade(andy,5);
 
 
         map.put("gotskilz", randy);
