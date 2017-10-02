@@ -24,11 +24,12 @@ public class GradesApplication {
         map.put("ep187", erik);
         map.put("deadlyouth", ramiro);
         map.put("bloodywarrior", andy);
-        menu(map);
+
+        printAll(map);
 
     }
 
-        public static void menu(HashMap<String, Student> map){
+        public static void printAll(HashMap<String, Student> map){
             Input input = new Input();
             String userInput;
             boolean cont;
