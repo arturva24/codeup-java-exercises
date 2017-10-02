@@ -8,36 +8,42 @@ import util.Input;
 
 public class GradesApplication {
     public static void main(String[] args) {
-        HashMap <String, Student> usernames = new HashMap<>();
-        Student zack =new Student("Zack");
-        gradeGenerate(zack,5);
+        HashMap <String, Student> map = new HashMap<>();
+        Student randy =new Student("Randy");
+        randy.addGrade(100); randy.addGrade(50); randy.addGrade(0); randy.addGrade(70);
+//        randomGrade(zack,5);
         Student ryan =new Student("Ryan");
-        gradeGenerate(ryan,5);
-        Student jason= new Student("Jason");
-        gradeGenerate(jason,5);
-        Student fernando= new Student("Fernando");
-        gradeGenerate(fernando,5);
-        Student luis= new Student("Luis");
-        gradeGenerate(luis,5);
+        ryan.addGrade(90); ryan.addGrade(90); ryan.addGrade(80); ryan.addGrade(89);
+//        randomGrade(ryan,5);
+        Student erik= new Student("Erik");
+        erik.addGrade(100); erik.addGrade(90); erik.addGrade(95); erik.addGrade(91);
+//        randomGrade(jason,5);
+        Student ramiro= new Student("Ramiro");
+        ramiro.addGrade(100); ramiro.addGrade(100); ramiro.addGrade(80); ramiro.addGrade(86);
+//        randomGrade(fernando,5);
+        Student andy= new Student("Andy");
+        andy.addGrade(100); andy.addGrade(97); andy.addGrade(96); andy.addGrade(97);
+//        randomGrade(luis,5);
 
 
-        usernames.put("zgulde", zack);
-        usernames.put("ryanorsinger",ryan);
-        usernames.put("jreich5", jason);
-        usernames.put("fmendozaro", fernando);
-        usernames.put("MontealegreLuis", luis);
-        menu(usernames);
+        map.put("gotskilz", randy);
+        map.put("rchavez",ryan);
+        map.put("ep187", erik);
+        map.put("deadlyouth", ramiro);
+        map.put("bloodywarrior", andy);
+        menu(map);
 
     }
 
-    public static void gradeGenerate (Student student, int grades){
-        Random randNum = new Random();
-        int studentGrade;
-        for (int i = 0; i < grades; i++) {
-            studentGrade = randNum.nextInt(100);
-            student.addGrade (studentGrade);
-        }
-    }
+//  ***Random grade Generator***
+//  public static void randomGrade (Student student, int grades){
+//        Random randNum = new Random();
+//        int studentGrade;
+//        for (int i = 0; i < grades; i++) {
+//            studentGrade = randNum.nextInt(100);
+//            student.addGrade (studentGrade);
+//        }
+//    }
 
         public static void menu(HashMap<String, Student> map){
             Input input = new Input();
