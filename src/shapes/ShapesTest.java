@@ -6,8 +6,8 @@ class Implement {
         Measurable myShape = new Rectangle(5,4);
         Measurable mySquare = new Square(5);
 
-        System.out.println(myShape.getPerimeter());
-        System.out.println(myShape.getArea());
+        System.out.println("perimeter: " + myShape.getPerimeter());
+        System.out.println("area: " + myShape.getArea());
 
         System.out.println(mySquare.getPerimeter());
         System.out.println(mySquare.getArea());
