@@ -38,10 +38,10 @@ public class Input {
         try{
             int input = Integer.valueOf(getString());
              return input;
-         } catch (NumberFormatException e) {
-        System.out.println(e.getMessage());
-        System.out.println("Invalid input! Try again!");
-        return getInt(prompt);
+        } catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Invalid input! Try again!");
+            return getInt(prompt);
         }
 //        if (this.scanner.hasNextInt()) {
 //            return this.scanner.nextInt();
