@@ -19,7 +19,7 @@ public class MoviesApplication {
                     "4 - View movies in the Horror category\n" +
                     "5 - View movies in the Scifi category\n");
 
-            System.out.println("Enter your choice:");
+//            System.out.println("Enter your choice:");
 
 
             int movieOptions = input.getInt("Enter your choice: ", 0, 5);
